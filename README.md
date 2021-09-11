@@ -10,13 +10,13 @@ After the feature extraction, a classifier based on **multilayer perceptron netw
 
 Experiments on **PTB diagnostic database** demonstrate that the proposed system achieved satisfactory performance to differentiating MI patients from healthy subjects and to localizing the infarcted area.  
 
-Details of this study please refer to -> https://doi.org/10.3390/s20247246
+Details of this study please refer to :point_right:	 https://doi.org/10.3390/s20247246
   
   
 ## Daraset    
 
 To automatic download the records from PTD database,
-  please refer to -> https://github.com/yuhung1206/Auto_download_PTB  
+  please refer to :point_right:	 https://github.com/yuhung1206/Auto_download_PTB  
   
 ## Execution  
 
