@@ -66,10 +66,14 @@ To automatic download the records from PTD database,
      - Main program: `Classification_SMOTE.m`
      - Sub programs: `mySMOTE.m`
     
-    |Code |function|
-    |-----|--------|
-    |`Classification_SMOTE.m`|FNN for classification|
-    |`mySMOTE.m`|deal with the imbalanced database|  
+        |Code |function|
+        |-----|--------|
+        |`Classification_SMOTE.m`|FNN for classification|
+        |`mySMOTE.m`|deal with the imbalanced database|  
+    
+    - Get `mySMOTE.m` from --> https://www.mathworks.com/matlabcentral/fileexchange/70315-smote-over-sampling  
+       - What is **SMOTE**?  
+       - ...coming soon
     
     - make sure InputName is correct:   
       ![](https://i.imgur.com/80m5B9v.png)
@@ -80,5 +84,8 @@ To automatic download the records from PTD database,
     - start training  
      ![](https://i.imgur.com/qk6hEZM.png)
 
+
+### Reference
+[1] Abhishek Gupta (2021). SMOTE-over-Sampling (https://github.com/earthat/SMOTE-over-Sampling), GitHub. Retrieved September 11, 2021.
 
   
