@@ -22,12 +22,16 @@ To automatic download the records from PTD database,
       
     - Main program: `SplineFeatureExtract.m`  
     - Sub programs: `SplineFit_1_Lead_Exclude_NoSeg.m`, `SplineFit_2_Lead_Exclude_NoSeg.m`, `SplineFit_3_Lead_Exclude_NoSeg.m`, `pan_tompkin.m`  
-    ![](https://i.imgur.com/TJtLpc3.png)  
+    ![](https://i.imgur.com/TJtLpc3.png)   
                 
       |Code |function|
       |-----|--------|
       |`SplineFit_k_Lead_Exclude_NoSeg.m`|extract feature from k leads & generate label for learning |
-      |`pan_tompkin.m`|R-peak detection      |
+      |`pan_tompkin.m`|R-peak detection      |   
+      |`plotATM.m`| Load .mat and .info files
+        
+    -  Get function "plotATM.m" from physionet website  
+      --> https://archive.physionet.org/physiotools/matlab/plotATM.m 
     
     
     - ReconFlag and lead_I_Flag:  
