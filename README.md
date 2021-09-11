@@ -31,7 +31,7 @@ To automatic download the records from PTD database,
       |`plotATM.m`| Load .mat and .info files
         
     -  Get function "plotATM.m" from physionet website  
-      --> https://archive.physionet.org/physiotools/matlab/plotATM.m 
+      :point_right: https://archive.physionet.org/physiotools/matlab/plotATM.m 
     
     
     - ReconFlag and lead_I_Flag:  
@@ -75,7 +75,7 @@ To automatic download the records from PTD database,
         |`Classification_SMOTE.m`|FNN for classification|
         |`mySMOTE.m`|deal with the imbalanced database|  
     
-    - Get `mySMOTE.m` from --> https://www.mathworks.com/matlabcentral/fileexchange/70315-smote-over-sampling  
+    - Get `mySMOTE.m` from :point_right: https://www.mathworks.com/matlabcentral/fileexchange/70315-smote-over-sampling  
        - What is **SMOTE**?  
        - ...coming soon
     
