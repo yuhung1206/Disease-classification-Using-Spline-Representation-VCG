@@ -10,10 +10,15 @@ After the feature extraction, a classifier based on **multilayer perceptron netw
 
 Experiments on **PTB diagnostic database** demonstrate that the proposed system achieved satisfactory performance to differentiating MI patients from healthy subjects and to localizing the infarcted area.  
 
-Details of this study please refer to :point_right:	 https://doi.org/10.3390/s20247246
+Details of this study please refer to :point_right:	 https://doi.org/10.3390/s20247246  
+
+## System structure  
+This project implement only the latter part of the proposed system. (The other part will coming soon)
+![image](https://user-images.githubusercontent.com/78803926/133741445-52caf121-cc85-43d1-8c57-66cde01d589d.png)  
+
   
   
-## Daraset    
+## Dataset    
 
 To automatic download the records from PTD database,
   please refer to :point_right:	 https://github.com/yuhung1206/Auto_download_PTB  
@@ -44,13 +49,7 @@ To automatic download the records from PTD database,
     
     - Set the ```lead_Num``` as [13,14,15] to extract features from VCG (Vx, Vy, Vz)  
       ![image](https://user-images.githubusercontent.com/78803926/133735747-280c3b2a-abe9-481b-98f4-1279ae611f87.png)  
-      
-       - The setting to extract features from Vx+Vy leads is shown below: 
-        ![image](https://user-images.githubusercontent.com/78803926/133737330-c07367bd-d5b2-4949-ba37-28bb38db1f55.png)  
-         and select the function ```SplineFit_2lead_ECG.m```  
-         ![image](https://user-images.githubusercontent.com/78803926/133737858-e4c56a56-bdfb-431d-8d96-1cdadfc40c6f.png)
-
-  
+        
   
     - Set Output Name & directory to store features  
       ![image](https://user-images.githubusercontent.com/78803926/133736079-527dc876-e733-4782-a29d-e7720f269696.png)  
@@ -65,7 +64,11 @@ To automatic download the records from PTD database,
       `SplineFit_2lead_ECG.m` -> 2 lead features(35 dimension)  
       `SplineFit_3lead_ECG.m` -> 3 lead features(52 dimension)
           
-        ![image](https://user-images.githubusercontent.com/78803926/133737025-24811da8-cb92-4e81-ab2a-288be55038d0.png)
+        ![image](https://user-images.githubusercontent.com/78803926/133737025-24811da8-cb92-4e81-ab2a-288be55038d0.png)  
+         - The setting to extract features from Vx+Vy leads is shown below: 
+              ![image](https://user-images.githubusercontent.com/78803926/133737330-c07367bd-d5b2-4949-ba37-28bb38db1f55.png)  
+               and select the function ```SplineFit_2lead_ECG.m```  
+               ![image](https://user-images.githubusercontent.com/78803926/133737858-e4c56a56-bdfb-431d-8d96-1cdadfc40c6f.png)
         
         
     - Start extraction  
