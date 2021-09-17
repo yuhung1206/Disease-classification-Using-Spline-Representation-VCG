@@ -97,7 +97,9 @@ To automatic download the records from PTD database,
       Because it is 12-type classification, the size of `total` is [12x12].
     
     - start training  
-     ![](https://i.imgur.com/qk6hEZM.png)
+     ![](https://i.imgur.com/qk6hEZM.png)  
+     ![image](https://user-images.githubusercontent.com/78803926/133749698-18522b85-6d53-4fa3-a411-38fa2e2b2cd2.png)
+
 
 
 ## Reference
