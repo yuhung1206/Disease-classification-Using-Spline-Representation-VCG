@@ -32,12 +32,12 @@ To automatic download the records from PTD database,
     - Main program: `SplineFeatureExtract.m`  
     - Sub programs: `SplineFit_1lead_ECG.m`, `SplineFit_2lead_ECG.m`, `SplineFit_3lead_ECG.m`, `pan_tompkin.m`  
     
-      ![image](https://user-images.githubusercontent.com/78803926/133735227-04999d95-68c6-49a6-8e0e-7b37816b3522.png) 
+      ![image](https://user-images.githubusercontent.com/78803926/133735227-04999d95-68c6-49a6-8e0e-7b37816b3522.png)  
                 
       |Code |function|
       |-----|--------|
       |`SplineFit_klead_ECG.m`|extract feature from k leads & generate label for learning |
-      |`pan_tompkin.m` [1][2]|R-peak detection          |   
+      |`pan_tompkin.m` [1][2]|R-peak detection         |   
       |`plotATM.m`          | Load .mat and .info files|
         
     -  Get function **"plotATM.m"** from physionet website  
@@ -78,8 +78,7 @@ To automatic download the records from PTD database,
     Note: input are features rather than signals  
     
      - Main program: `Classification_SMOTE.m`
-     - Sub programs: `mySMOTE.m`  
-       ![image](https://user-images.githubusercontent.com/78803926/133742593-7a10cd5c-86d8-4768-8b40-4cba806fcbd8.png)  
+     - Sub programs: `mySMOTE.m`
     
         |Code |function|
         |-----|--------|
@@ -87,8 +86,9 @@ To automatic download the records from PTD database,
         |`mySMOTE.m`|deal with the imbalanced database|  
     
     - Get `mySMOTE.m` from [3] :point_right: https://www.mathworks.com/matlabcentral/fileexchange/70315-smote-over-sampling  
-       - What is **SMOTE**?  
-       - ...coming soon
+        
+       ![image](https://user-images.githubusercontent.com/78803926/133742593-7a10cd5c-86d8-4768-8b40-4cba806fcbd8.png)  
+       
     
     - make sure InputName is correct:   
       ![image](https://user-images.githubusercontent.com/78803926/133738485-600aa9a4-1936-4b80-82fc-9b07dc9a39a4.png)
