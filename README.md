@@ -17,21 +17,23 @@ Details of this study please refer to :point_right:	 https://doi.org/10.3390/s20
 
 To automatic download the records from PTD database,
   please refer to :point_right:	 https://github.com/yuhung1206/Auto_download_PTB  
+    ![image](https://user-images.githubusercontent.com/78803926/133739922-e2106dbe-e32d-4222-84b0-edd1c8c58012.png)
+
   
 ## Execution  
 
-1. **Spline-based feature extraction**  
-    Note: all input signals(derived,real) must have been **preprocessed**  
-      
+1. **Spline-based feature extraction**  `spline`
+          
     - Main program: `SplineFeatureExtract.m`  
-    - Sub programs: `SplineFit_1_Lead_Exclude_NoSeg.m`, `SplineFit_2_Lead_Exclude_NoSeg.m`, `SplineFit_3_Lead_Exclude_NoSeg.m`, `pan_tompkin.m`  
-    ![](https://i.imgur.com/TJtLpc3.png)   
+    - Sub programs: `SplineFit_1lead_ECG.m`, `SplineFit_2lead_ECG.m`, `SplineFit_3lead_ECG.m`, `pan_tompkin.m`  
+    
+      ![image](https://user-images.githubusercontent.com/78803926/133735227-04999d95-68c6-49a6-8e0e-7b37816b3522.png) 
                 
       |Code |function|
       |-----|--------|
-      |`SplineFit_k_Lead_Exclude_NoSeg.m`|extract feature from k leads & generate label for learning |
-      |`pan_tompkin.m`|R-peak detection      |   
-      |`plotATM.m`| Load .mat and .info files
+      |`SplineFit_klead_ECG.m`|extract feature from k leads & generate label for learning |
+      |`pan_tompkin.m` [1][2]|R-peak detection          |   
+      |`plotATM.m`          | Load .mat and .info files|
         
     -  Get function **"plotATM.m"** from physionet website  
       :point_right: https://archive.physionet.org/physiotools/matlab/plotATM.m  
@@ -40,32 +42,31 @@ To automatic download the records from PTD database,
       :point_right: https://www.mathworks.com/matlabcentral/fileexchange/45840-complete-pan-tompkins-implementation-ecg-qrs-detector  
     
     
-    - ReconFlag and lead_I_Flag:  
-      ![image](https://user-images.githubusercontent.com/78803926/132938811-b585364c-f83e-4b1c-aca9-2d566fe5d6ef.png)
+    - Set the ```lead_Num``` as [13,14,15] to extract features from VCG (Vx, Vy, Vz)  
+      ![image](https://user-images.githubusercontent.com/78803926/133735747-280c3b2a-abe9-481b-98f4-1279ae611f87.png)  
+      
+       - The setting to extract features from Vx+Vy leads is shown below: 
+        ![image](https://user-images.githubusercontent.com/78803926/133737330-c07367bd-d5b2-4949-ba37-28bb38db1f55.png)  
+         and select the function ```SplineFit_2lead_ECG.m```  
+         ![image](https://user-images.githubusercontent.com/78803926/133737858-e4c56a56-bdfb-431d-8d96-1cdadfc40c6f.png)
+
   
   
-    - Output Name & directory for features  
-      ![](https://i.imgur.com/VNY5v8I.png)
+    - Set Output Name & directory to store features  
+      ![image](https://user-images.githubusercontent.com/78803926/133736079-527dc876-e733-4782-a29d-e7720f269696.png)  
+      
     - Input filename
-    make sure that input filename is correct
-    ![](https://i.imgur.com/YvygQyJ.png)
+    make sure that input filename is correct  
+    ![image](https://user-images.githubusercontent.com/78803926/133736563-a2a1b147-2c03-4a16-aa71-923329440d92.png)
+
 
     - Choose how many leads to extract:  
-      `SplineFit_1_Lead_Exclude_NoSeg` -> 1 lead features(18)  
-      `SplineFit_2_Lead_Exclude_NoSeg` -> 2 lead features(35)
-      `SplineFit_3_Lead_Exclude_NoSeg` -> 3 lead features(52)
+      `SplineFit_1lead_ECG.m` -> 1 lead features(18 dimension)  
+      `SplineFit_2lead_ECG.m` -> 2 lead features(35 dimension)  
+      `SplineFit_3lead_ECG.m` -> 3 lead features(52 dimension)
           
-        ![](https://i.imgur.com/nUn0MeP.png)
-    
-        - For `SplineFit_1_Lead_Exclude_NoSeg.m`  
-          `singal(1,:)`-->X lead  
-          `singal(2,:)`-->Y lead  
-          `singal(3,:)`-->Z lead  
-          ![](https://i.imgur.com/go6UP8R.png)
+        ![image](https://user-images.githubusercontent.com/78803926/133737025-24811da8-cb92-4e81-ab2a-288be55038d0.png)
         
-       - For `SplineFit_2_Lead_Exclude_NoSeg.m`
-       The example of X+Y leads is shown below: 
-        ![](https://i.imgur.com/gj8059A.png)
         
     - Start extraction  
       ![](https://i.imgur.com/v8Tf9jK.png)
@@ -81,21 +82,23 @@ To automatic download the records from PTD database,
         |`Classification_SMOTE.m`|FNN for classification|
         |`mySMOTE.m`|deal with the imbalanced database|  
     
-    - Get `mySMOTE.m` from :point_right: https://www.mathworks.com/matlabcentral/fileexchange/70315-smote-over-sampling  
+    - Get `mySMOTE.m` from [3] :point_right: https://www.mathworks.com/matlabcentral/fileexchange/70315-smote-over-sampling  
        - What is **SMOTE**?  
        - ...coming soon
     
     - make sure InputName is correct:   
-      ![](https://i.imgur.com/80m5B9v.png)
+      ![image](https://user-images.githubusercontent.com/78803926/133738485-600aa9a4-1936-4b80-82fc-9b07dc9a39a4.png)
 
-    - make sure Output filepath is correct:  
-      ![](https://i.imgur.com/K00bPin.png)
+    - the classification performance will be stored in `total` variable:  
+      Because it is 12-type classification, the size of `total` is [12,12].
     
     - start training  
      ![](https://i.imgur.com/qk6hEZM.png)
 
 
-### Reference
-[1] Abhishek Gupta (2021). SMOTE-over-Sampling (https://github.com/earthat/SMOTE-over-Sampling), GitHub. Retrieved September 11, 2021.
+## Reference
+  [1] Sedghamiz. H, "Matlab Implementation of Pan Tompkins ECG QRS detector.", March 2014. https://www.researchgate.net/publication/313673153_Matlab_Implementation_of_Pan_Tompkins_ECG_QRS_detect  
+  [2] PAN.J, TOMPKINS. W.J,"A Real-Time QRS Detection Algorithm" IEEE TRANSACTIONS ON BIOMEDICAL ENGINEERING, VOL. BME-32, NO. 3, MARCH 1985.  
+  [3] Abhishek Gupta (2021). SMOTE-over-Sampling (https://github.com/earthat/SMOTE-over-Sampling), GitHub. Retrieved September 11, 2021.
 
   
