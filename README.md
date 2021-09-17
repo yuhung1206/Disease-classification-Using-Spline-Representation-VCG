@@ -94,7 +94,7 @@ To automatic download the records from PTD database,
       ![image](https://user-images.githubusercontent.com/78803926/133738485-600aa9a4-1936-4b80-82fc-9b07dc9a39a4.png)
 
     - the classification performance will be stored in `total` variable:  
-      Because it is 12-type classification, the size of `total` is [12,12].
+      Because it is 12-type classification, the size of `total` is [12x12].
     
     - start training  
      ![](https://i.imgur.com/qk6hEZM.png)
