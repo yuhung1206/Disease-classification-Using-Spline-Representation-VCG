@@ -78,7 +78,8 @@ To automatic download the records from PTD database,
     Note: input are features rather than signals  
     
      - Main program: `Classification_SMOTE.m`
-     - Sub programs: `mySMOTE.m`
+     - Sub programs: `mySMOTE.m`  
+       ![image](https://user-images.githubusercontent.com/78803926/133742593-7a10cd5c-86d8-4768-8b40-4cba806fcbd8.png)  
     
         |Code |function|
         |-----|--------|
