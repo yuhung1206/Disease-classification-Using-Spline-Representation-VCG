@@ -13,7 +13,7 @@ Experiments on **PTB diagnostic database** demonstrate that the proposed system 
 Details of this study please refer to :point_right:	 https://doi.org/10.3390/s20247246  
 
 ## System structure  
-This project implement only the latter part of the proposed system. (The other part will coming soon)
+This project implement only the latter part of the proposed system. (The other part will be added soon)
 ![image](https://user-images.githubusercontent.com/78803926/133741445-52caf121-cc85-43d1-8c57-66cde01d589d.png)  
 
   
