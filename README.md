@@ -33,8 +33,11 @@ To automatic download the records from PTD database,
       |`pan_tompkin.m`|R-peak detection      |   
       |`plotATM.m`| Load .mat and .info files
         
-    -  Get function "plotATM.m" from physionet website  
-      :point_right: https://archive.physionet.org/physiotools/matlab/plotATM.m 
+    -  Get function **"plotATM.m"** from physionet website  
+      :point_right: https://archive.physionet.org/physiotools/matlab/plotATM.m  
+      
+    -  Get function **"pan_tompkin.m"**  
+      :point_right: https://www.mathworks.com/matlabcentral/fileexchange/45840-complete-pan-tompkins-implementation-ecg-qrs-detector  
     
     
     - ReconFlag and lead_I_Flag:  
