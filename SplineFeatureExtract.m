@@ -1,9 +1,9 @@
 close all; clear all; clc;
 
 rng(1);                         % fix the random seed
-samplingrate = 500;   % 1000 downsample to 500
-lead_Num = [13,14,15];            % standard 12 lead ECG --> 1~12, 3 Frank lead --> 13~15
-windowsize = 400;      % each heartbeat sample to 400 points
+samplingrate = 500;             % 1000 downsample to 500
+lead_Num = [13,14,15];          % standard 12 lead ECG --> 1~12, 3 Frank lead --> 13~15
+windowsize = 400;               % each heartbeat sample to 400 points
 
 %-----Output File Name-----%
 filename = 'Splines_VCG_12type.mat';
@@ -156,7 +156,7 @@ for DataNumber = 1 : W
     %[feature, ~] = SplineFit_2lead_ECG(signal, samplingrate, windowsize, DataNumber, typeString, ECG_data, lead_I);
     [feature, ~] = SplineFit_3lead_ECG(signal, samplingrate, windowsize, DataNumber, typeString, ECG_data, lead_I);
     
-    %-----Record Target Type-----%
+    %-----label Target Type-----%
     [dim_input,width] = size(feature');
     labelCol = [];
     labelCol = zeros(length(TypeLen(1,:)),width);
