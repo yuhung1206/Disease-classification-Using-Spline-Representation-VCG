@@ -20,7 +20,7 @@ This project implement only the latter part of the proposed system. (The other p
   
 ## Dataset    
 
-To automatic download the records from PTD database,
+To automatically download the records from PTD database,
   please refer to :point_right:	 https://github.com/yuhung1206/Auto_download_PTB  
     ![image](https://user-images.githubusercontent.com/78803926/133739922-e2106dbe-e32d-4222-84b0-edd1c8c58012.png)
 
